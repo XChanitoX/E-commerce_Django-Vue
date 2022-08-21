@@ -14,7 +14,7 @@ cd env/Scripts
 activate
 ```
 
-### Instalamos Django
+### Regresamos a la carpeta root e instalamos Django
 ```
 pip install django
 ```
