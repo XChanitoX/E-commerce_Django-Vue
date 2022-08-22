@@ -48,7 +48,7 @@ export default {
 
             this.$store.commit('setIsLoading', true)
 
-            axios
+            await axios
             .get(`api/v1/products/${categorySlug}/`)
             .then(response => {
                 this.category = response.data
