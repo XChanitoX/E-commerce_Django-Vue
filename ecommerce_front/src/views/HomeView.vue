@@ -48,6 +48,8 @@ export default {
   },
   mounted() {
     this.getLatestProducts()
+
+    document.title = "Home | Chanito's Industries"
   },
   methods: {
     async getLatestProducts(){
@@ -61,7 +63,7 @@ export default {
       .catch(error => {
         console.log(error);
       })
-      
+
       this.$store.commit('setIsLoading', false)
     }
   }
