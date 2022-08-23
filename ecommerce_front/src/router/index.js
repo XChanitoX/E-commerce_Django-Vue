@@ -10,6 +10,7 @@ import SignUp from '../views/SignUp.vue'
 import LogIn from '../views/LogIn.vue'
 import MyAccount from '../views/MyAccount.vue'
 import CheckOut from '../views/CheckOut.vue'
+import SuccessView from '../views/SuccessView.vue'
 
 import store from '@/store'
 
@@ -38,14 +39,19 @@ const routes = [
     }
   },
   {
+    path: '/search',
+    name: 'Search',
+    component: SearchView
+  },
+  {
     path: '/cart',
     name: 'Cart',
     component: CartView
   },
   {
-    path: '/search',
-    name: 'Search',
-    component: SearchView
+    path: '/cart/success',
+    name: 'SuccessView',
+    component: SuccessView
   },
   {
     path: '/cart/checkout',
