@@ -6,21 +6,21 @@
 
                 <form @submit.prevent="submitForm">
                 <div class="field">
-                    <label>Username</label>
+                    <label>Usuario</label>
                     <div class="control">
                         <input type="text" class="input" v-model="username">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label>Password</label>
+                    <label>Contraseña</label>
                     <div class="control">
                         <input type="password" class="input" v-model="password">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label>Repeat Password</label>
+                    <label>Repita la contraseña</label>
                     <div class="control">
                         <input type="password" class="input" v-model="password2">
                     </div>
@@ -32,13 +32,13 @@
 
                 <div class="field">
                     <div class="control">
-                        <button class="button is-dark">Sign Up</button>
+                        <button class="button is-dark">Registrar</button>
                     </div>
                 </div>
 
                 <hr>
 
-                Or <router-link to="/log-in">click here</router-link> to log in.
+                Si ya estas registrado <router-link to="/log-in">clickea aquí</router-link> para logearte.
 
                 </form>
             </div>
@@ -64,7 +64,7 @@ export default {
         submitForm(){
             this.errors = []
 
-            if (this.usename === ''){
+            if (this.username === ''){
                 this.errors.push('The username is missing')
             }
             if (this.password === ''){
@@ -111,6 +111,9 @@ export default {
                 })
             }
         }
+    },
+    mounted(){
+        document.title = "Sign Up | Chanito's Industries"
     }
 }
 
