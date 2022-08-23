@@ -9,6 +9,8 @@ import CartView from '../views/CartView.vue'
 import SignUp from '../views/SignUp.vue'
 import LogIn from '../views/LogIn.vue'
 import MyAccount from '../views/MyAccount.vue'
+import CheckOut from '../views/CheckOut.vue'
+
 import store from '@/store'
 
 const routes = [
@@ -44,6 +46,14 @@ const routes = [
     path: '/search',
     name: 'Search',
     component: SearchView
+  },
+  {
+    path: '/cart/checkout',
+    name: 'CheckOut',
+    component: CheckOut,
+    meta: {
+      requireLogin: true
+    }
   },
   {
     path: '/:category_slug/:product_slug/',
